@@ -172,7 +172,7 @@ footer {
     text-align: center;
     padding: 10px;
     color: black;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     bottom: 0;
 }
