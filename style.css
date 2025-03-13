@@ -16,12 +16,14 @@
     color: white;
 }
 .menu{
+  
+   
     background-color: white;
 }
 .menu img{
 
   height: 30px;
-  margin-left: 8px;
+  padding: 5px;
   
   
 }
@@ -29,7 +31,7 @@
 /* Navbar */
 
 .navbar {
-    padding: 4px 0;
+   
     background-color: #1f2dc8;
     border: 0.0001px solid white;
     overflow-x: auto;  
@@ -176,6 +178,8 @@
 
 /* Footer */
 footer {
+    position: relative;
+    bottom: 0;
     background-color: #cfcfcf;
     text-align: center;
     padding: 10px;
