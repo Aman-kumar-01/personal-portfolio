@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Dynamic typing effect
     const textElement = document.querySelector(".details h2");
-    const textArray = ["Software Developer", "Backend Engineer", "Game Developer", "Ethical Hacker"];
+    const textArray = ["Web Developer", "Backend Engineer", "Software Developer", "Ethical Hacker"];
     let textIndex = 0;
     let charIndex = 0;
 
