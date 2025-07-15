@@ -5,6 +5,12 @@
   font-family: Arial, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Adjust this based on navbar height */
+}
+
+
 body {
   max-width: 2100px;
   margin: 0 auto;

@@ -1,11 +1,28 @@
+// script.js
+
 function toggleMenu() {
-    document.getElementById('nav-links').classList.toggle('active');
-    document.body.classList.toggle('menu-open');
+    const navLinks = document.getElementById('nav-links');
+    const menuIcon = document.getElementById('menu-icon');
+    const body = document.body;
+
+    navLinks.classList.toggle('active');
+
+    if (navLinks.classList.contains('active')) {
+        body.classList.add('menu-open');
+        menuIcon.innerHTML = '✖'; // Close icon
+    } else {
+        body.classList.remove('menu-open');
+        menuIcon.innerHTML = '☰'; // Menu icon
+    }
 }
 
-document.querySelectorAll('.nav-links a').forEach(link => {
+// Optional: Close menu when clicking a nav link (for smooth UX)
+document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        document.getElementById('nav-links').classList.remove('active');
+        const navLinks = document.getElementById('nav-links');
+        const menuIcon = document.getElementById('menu-icon');
         document.body.classList.remove('menu-open');
+        navLinks.classList.remove('active');
+        menuIcon.innerHTML = '☰';
     });
 });
