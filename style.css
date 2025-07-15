@@ -6,7 +6,7 @@
 }
 
 body {
-  max-width: 2500px;
+  max-width: 2100px;
   margin: 0 auto;
   padding: 0 8px;
   font-size: 16px;
@@ -76,10 +76,10 @@ body.menu-open {
     align-items: center;       
     justify-content: center;   
     flex-wrap: wrap;
-    padding: 60px 20px;
+    padding: 40px 20px;
     background: linear-gradient(135deg, #ff4b5c, #222);
     color: white;
-    gap: 80px;
+    gap: 40px;
 }
 
 .hero-right img {
