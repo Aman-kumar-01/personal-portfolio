@@ -2,98 +2,108 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal-portfolio</title>
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aman Kumar | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="header-fixed">
-        <header>            
-       <!-- nav-bar -->
-             
-            <div class="navbar">
 
-                <div class="menu">
-                    <a href=""> <img src="menu.png" alt=""> </a> 
-                 </div>
-                
-                <nav>
-                    <ul>
-                        <li><a href="#" target="_blank">Home</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="https://www.gcsm.net.in/about-us" target="_blank">About Me</a></li>
-                        <li><a href="https://www.gcsm.net.in/results" target="_blank">project</a></li>
-                        <li><a href="https://www.youtube.com/@Pagalyt99" target="_blank">Youtube Channel</a></li>
-                        <li><a href="https://github.com/Amankumar950898" target="_blank">Github</a></li>
-
-                    </ul>
-
-                </nav>
-            </div>
-
-        </header>
-
-        <!-- hero secion -->
-
-        <div class="hero-sec-fixed">
-
-            <div class="my-image" ><img src="my-image.png"  alt=""></div>
-
-            <div class="details">
-                <h1>I'm Aman <span>kumar</span></h1>
-                <h2> SoftWare Developer..</h2>
-
-                <!-- contact button  -->
-
-                <div class="contact">
-                    <a href="contact.html" target="_blank">
-                        <h3>Contact me.</h3>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-        <div class="show-item">
-
-            <div class=" box">
-                <div class="box1 fix-img">
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus recusandae magni ratione.
-                        Dolorem
-                        dolorum doloremque nihil pariatur ut quas?</h2>
-                </div>
-            </div>
-            <div class=" box">
-                <div class="box2 fix-img">
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus recusandae magni ratione.
-                        Dolorem
-                        dolorum doloremque nihil pariatur ut quas?</h2>
-                </div>
-            </div>
-            <div class=" box">
-                <div class="box3 fix-img">
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus recusandae magni ratione.
-                        Dolorem
-                        dolorum doloremque nihil pariatur ut quas?</h2>
-                </div>
-            </div>
-            <div class=" box">
-                <div class="box4 fix-img">
-                    <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab natus recusandae magni ratione.
-                        Dolorem
-                        dolorum doloremque nihil pariatur ut quas?</h2>
-                </div>
-            </div>
-        </div>
-
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
     </div>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.youtube.com/@Pagalyt99" target="_blank">Youtube</a></li>
+    </ul>
+    <div id="menu-icon" class="menu-icon" onclick="toggleMenu()">☰</div>
+  </nav>
 
-    <script src="script.js"></script>
 
-    <footer>
-        <p>Copyright &#169; 2024 </p>
-    </footer>
+  <!-- Hero Section -->
+
+  <section id="home" class="hero">
+    <div class="hero-right">
+      <img src="images/Photo.jpg" alt="Your Photo">
+    </div>
+    <div class="hero-left">
+      <h1>Hi, I'm <span class="highlight">Aman Kumar</span></h1>
+      <p>Ethical Hacker | Web Developer | BCA Student</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am a BCA student with a passion for ethical hacking and web development.</p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skill-list">
+      <div class="skill">Web Developer</div>
+      <div class="skill">Software Developer</div>
+      <div class="skill">Ethical Hacking</div>
+      <div class="skill">C, C++, DSA</div>
+      <div class="skill">Python Basics</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">Portfolio Website</div>
+      <div class="project-card">Netflix Clone</div>
+      <div class="project-card">Blog Website</div>
+      <div class="project-card">Waste Management Website</div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: amankumar950898@gmail.com</p>
+    <p>GitHub: github.com/Aman-kumar-01</p>
+    <p>LinkedIn: linkedin.com/in/aman-kumar-b85aa432a/</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 Aman Kumar. All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/16Ec3e5tyS/" target="_blank">
+          <img src="images/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/aman_kumar_1_4_3/#" target="_blank">
+          <img src="images/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://x.com/Aman_kumar_95?t=v1yG0Qi-30d5zTFBBLQTmA&s=09" target="_blank">
+          <img src="images/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.linkedin.com/in/aman-kumar-b85aa432a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/Aman-kumar-01" target="_blank">
+          <img src="images/github.png" alt="GitHub">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
