@@ -26,3 +26,20 @@ document.querySelectorAll('#nav-links a').forEach(link => {
         menuIcon.innerHTML = '☰';
     });
 });
+
+const modeBtn = document.getElementById('modes');
+const modeIcon = document.getElementById('mode-icon');
+const body = document.body;
+
+modeBtn.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+
+  // Change icon
+  if (body.classList.contains('dark-mode')) {
+    modeIcon.classList.remove('fa-moon');
+    modeIcon.classList.add('fa-sun');
+  } else {
+    modeIcon.classList.remove('fa-sun');
+    modeIcon.classList.add('fa-moon');
+  }
+});

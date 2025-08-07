@@ -25,15 +25,130 @@ body.menu-open {
     overflow: hidden;
 }
 
+
+/* Smooth transition */
+body, .navbar, section, .footer {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===================== */
+/*      DARK MODE        */
+/* ===================== */
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+body.dark-mode .nav-links a {
+  color: #f1f1f1;
+  transition: color 0.3s ease;
+}
+body.dark-mode .nav-links a:hover {
+  color: #ff4b5c;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .skill {
+  background-color: #333;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode .project-card {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  border: 1px solid #444;
+}
+
+body.dark-mode .btn {
+  background: #333;
+  color: #ff4b5c;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .btn:hover {
+  background: #ff4b5c;
+  color: #fff;
+}
+
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border-top: 1px solid #444;
+}
+
+body.dark-mode .social-name h4 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .social-icons a img {
+  filter: brightness(0) invert(1); /* makes icons white */
+}
+
+body.dark-mode .mode-toggle {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode .social-icons a i {
+  color: white;
+}
+/* Only for dark mode - invert icon */
+body.dark-mode .social-icons a img.invert-icon {
+  filter: invert(1) brightness(1.2);
+}
+
+/* Don’t apply filter to colored icons */
+body.dark-mode .social-icons a img:not(.invert-icon) {
+  filter: none;
+}
+
+/* Light/Dark toggle button */
+.mobile-mode-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: fit-content;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+/* Dark mode version */
+body.dark-mode .mobile-mode-toggle {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+
 .header-fixed{
-    background-color: #868181;
+    background-color: white;
 }
 /* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
+  background-color: white;
   color: white;
   padding: 20px;
   position: sticky;
@@ -44,6 +159,9 @@ body.menu-open {
 .logo img {
   height: 50px;
   width: auto;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
 }
 
 
@@ -60,7 +178,7 @@ body.menu-open {
 
 .nav-links a {
   text-decoration: none;
-  color: white;
+  color: black;
   font-weight: 600;
 }
 .nav-links li:hover {
@@ -76,21 +194,51 @@ body.menu-open {
   cursor: pointer;
 }
 
+/* Light and Default Mode */
+#modes {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#modes:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+/* Dark Mode Styling */
+body.dark-mode #modes {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  border: 1px solid #555;
+}
+
+body.dark-mode #modes:hover {
+  background-color: #2a2a2a;
+}
+
+
+
+
+
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;       
     justify-content: center;   
     flex-wrap: wrap;
-    padding: 40px 20px;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #ff4b5c, #222);
     color: white;
     gap: 40px;
 }
 
 .hero-right img {
-    width: 260px;
-    height: 260px;
+    width: 330px;
+    height: 330px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #fff;
@@ -172,7 +320,7 @@ h2 {
 }
 
 .project-card {
-  background: #222;
+  background: #ff4b5c;
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -182,10 +330,10 @@ h2 {
 /* Footer */
 
 .footer {
-    background-color: #222;
-    color: white;
+    background-color: white;
+    color: black;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     margin-top: 50px;
 }
 
@@ -195,15 +343,11 @@ h2 {
 }
 .social-name h4{
     font-size: 19px;
-    color: #ff4400;
-    margin-top: 10px;
+    color: black;
+    /* margin-top: 10px; */
     padding: 4px;
 }
-.social-name p{
-    font-size: 15px;
-    color: #03e94c;
-    
-}
+
 
 
 .social-icons {
@@ -233,7 +377,8 @@ h2 {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #222;
+    background: #8e7474;
+   
     position: absolute;
     top: 70px;
     left: 0;
@@ -242,9 +387,11 @@ h2 {
   }
   .nav-links.active {
     display: flex;
+    margin-top: 20px;
   }
   .menu-icon {
     display: block;
+    color: black;
   }
   .hero {
     flex-direction: column;
