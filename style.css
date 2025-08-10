@@ -11,7 +11,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  /* Navbar height ke hisaab se */
+
 }
 
 body {
@@ -133,6 +133,7 @@ body {
 
 .my-self {
   max-width: 800px;
+  text-align: start;
   letter-spacing: 1px;
   font-size: 16px;
   line-height: 1.6;
@@ -142,9 +143,11 @@ body {
 .hero-right {
   flex: 1;
   display: flex;
-  justify-content: center;   /* center the image */
+  justify-content: center;
+  /* center the image */
   align-items: center;
-  overflow: visible;         /* allow image to grow outside */
+  overflow: visible;
+  /* allow image to grow outside */
 }
 
 .hero-right img {
@@ -155,18 +158,16 @@ body {
   border: 5px solid #fff;
   animation: gentleMove 4s infinite ease-in-out;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  display: block;          
+  display: block;
 }
 
 .hero-right img:hover {
-  transform: scale(1.15);  
+  transform: scale(1.15);
   box-shadow:
     0 0 20px 8px rgba(0, 123, 255, 0.7),
-    0 0 40px 16px rgba(0, 123, 255, 0.5); 
+    0 0 40px 16px rgba(0, 123, 255, 0.5);
   cursor: pointer;
 }
-
-
 
 
 
@@ -260,7 +261,7 @@ body {
   margin: auto;
   font-size: 1.3rem;
   line-height: 1.7;
-  text-align: center;
+  text-align: start;
   color: #cbd5e1;
   padding: 15px 20px;
   background: rgba(255, 255, 255, 0.03);
@@ -270,7 +271,7 @@ body {
 }
 
 .about p:hover {
-  box-shadow: 0 6px 25px rgba(0, 255, 224, 0.25);
+  box-shadow: 0 6px 20px rgba(258, 234, 56, 2);
   transform: translateY(-5px);
 }
 
@@ -322,7 +323,7 @@ section {
   padding: 60px;
   border-radius: 10px;
   text-align: center;
-  
+
   display: inline-block;
   align-items: center;
   justify-content: center;
@@ -334,9 +335,9 @@ section {
 }
 
 .skill:hover {
-  background: #00ffe0;
+
   color: #0f172a;
-  box-shadow: 0 6px 20px rgba(0, 255, 224, 0.3);
+  box-shadow: 0 6px 20px rgba(258, 234, 56, 2);
   transform: translateY(-5px);
 }
 
@@ -388,6 +389,7 @@ section {
 .skill-list .skill:nth-child(10) {
   color: #FF9800;
 }
+
 .skill-list .skill:nth-child(11) {
   color: #ea07b1;
 }
@@ -402,6 +404,7 @@ section {
   text-align: center;
   color: #f1f5f9;
 }
+
 .projects h2::after {
   content: "";
   display: block;
@@ -426,7 +429,7 @@ section {
 }
 
 .project-card {
-  
+
   background: #1e293b;
   padding: 40px;
   border-radius: 10px;
@@ -437,29 +440,10 @@ section {
 }
 
 .project-card:hover {
+  box-shadow: 0 6px 20px rgba(258, 234, 56, 2);
   transform: translateY(-5px);
-  box-shadow: 0 0 20px rgba(0, 255, 224, 0.6);
 }
 
-/* Contact Section */
-.contact {
-  width: 100%;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  padding: 50px 0;
-  text-align: center;
-  color: #f1f5f9;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00ffe0;
-}
-
-.contact p {
-  margin: 8px 0;
-  font-size: 1.1rem;
-}
 
 
 
@@ -472,72 +456,135 @@ section {
 }
 
 /* contact section  */
-.contact {
-  width: 100%;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  padding: 50px 0;
-  text-align: center;
-  color: #f1f5f9;
-  box-shadow: 0 0 20px rgba(0, 255, 224, 0.1);
-}
 
-.contact h2 {
+
+h2 {
+  text-align: center;
+  color: #00ffe0;
   font-size: 2rem;
-  margin-bottom: 20px;
-  color: #00ffe0;
+  margin-top: 20px;
+  text-decoration: underline;
 }
 
-.contact p {
-  margin: 8px 0;
-  font-size: 1.1rem;
-  color: #cbd5e1;
-  transition: color 0.3s ease;
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  width: 85%;
+  flex-wrap: wrap;
 }
 
-.contact p:hover {
-  color: #00ffe0;
+/* Left Side Layout */
+.left-section {
+  flex: 1;
+  min-width: 280px;
 }
 
-
-
-/* =========================
-   FOOTER
-========================= */
-.footer {
+/* Common Box Style */
+.contact-info,
+.social-links,
+.right-section {
+  background-color: #141414;
   padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #4da3ff;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect for Full Box */
+.contact-info:hover,
+.social-links:hover,
+.right-section:hover {
+  box-shadow: 0 6px 20px rgba(258, 234, 56, 2);
+  transform: translateY(-5px);
+}
+
+/* Contact Info */
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.contact-info i {
+  color: #4da3ff;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #4da3ff;
+  color: #b7c7f7;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #4da3ff;
+  color: #000;
+}
+
+/* Right Side Form */
+.right-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #1c1c1c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #bfc5cb;
+  opacity: 1;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid #4da3ff;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #4da3ff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e90ff;
+}
+
+.footer {
   text-align: center;
-  background: linear-gradient(135deg, #0a0f1f, #111827);
-  color: #f1f5f9;
-
-}
-
-.footer-content {
-  max-width: 900px;
-  margin: auto;
-}
-
-.social-name h4 {
-  font-size: 19px;
-  padding: 4px;
-}
-
-.social-icons {
-  margin-top: 10px;
-}
-
-.social-icons a {
-  margin: 0 8px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.social-icons a img {
-  width: 32px;
-  height: 32px;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
+  background-color: #000;
+  padding: 30px;
 }
 
 /* =========================
@@ -572,6 +619,7 @@ section {
 
 /* Mobile view (max-width: 768px) */
 @media (max-width: 768px) {
+
   /* Navbar */
   .nav-links {
     display: none;
@@ -593,8 +641,15 @@ section {
   }
 
   @keyframes fadeInMenu {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .menu-icon {
@@ -620,6 +675,7 @@ section {
 
   .my-self {
     font-size: 15px;
+    text-align: start;
     padding: 0 10px;
   }
 
@@ -630,7 +686,7 @@ section {
 
   /* Buttons */
   .btn {
-    flex-direction: column;
+    
     gap: 12px;
     margin-top: 20px;
     width: 100%;
@@ -666,9 +722,9 @@ section {
   .hero-left h1 {
     font-size: 28px;
   }
-
   .my-self {
     font-size: 14px;
+    text-align: start;
   }
 
   .skill {
