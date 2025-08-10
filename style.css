@@ -11,7 +11,6 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-
 }
 
 body {
@@ -27,7 +26,6 @@ body {
   /* Neon glow */
   border-bottom: none;
 }
-
 
 /* =========================
    NAVBAR
@@ -91,7 +89,6 @@ body {
 
 .nav-links li a:hover {
   transform: scale(1.05);
-
 }
 
 .nav-links a:hover::after {
@@ -118,8 +115,6 @@ body {
   background: linear-gradient(to right, #020207, #191040, #5206b5);
   padding-bottom: 200px;
 }
-
-
 
 .hero-left h1 {
   font-size: 60px;
@@ -169,15 +164,11 @@ body {
   cursor: pointer;
 }
 
-
-
 @keyframes gentleMove {
-
   0%,
   100% {
     transform: translate(0, 0);
   }
-
   50% {
     transform: translate(2px, -10px);
   }
@@ -335,7 +326,6 @@ section {
 }
 
 .skill:hover {
-
   color: #0f172a;
   box-shadow: 0 6px 20px rgba(258, 234, 56, 2);
   transform: translateY(-5px);
@@ -343,47 +333,38 @@ section {
 
 .skill-list .skill:nth-child(1) {
   color: #E44D26;
-
 }
 
 .skill-list .skill:nth-child(2) {
   color: #ff00d0;
-
 }
 
 .skill-list .skill:nth-child(3) {
   color: #F0DB4F;
-
 }
 
 .skill-list .skill:nth-child(4) {
   color: #4CAF50;
-
 }
 
 .skill-list .skill:nth-child(5) {
   color: #0090ff;
-
 }
 
 .skill-list .skill:nth-child(6) {
   color: #FF6F61;
-
 }
 
 .skill-list .skill:nth-child(7) {
   color: #007add;
-
 }
 
 .skill-list .skill:nth-child(8) {
   color: #D2691E;
-
 }
 
 .skill-list .skill:nth-child(9) {
   color: #ca0aec;
-
 }
 
 .skill-list .skill:nth-child(10) {
@@ -393,7 +374,6 @@ section {
 .skill-list .skill:nth-child(11) {
   color: #ea07b1;
 }
-
 
 /* project section  */
 
@@ -429,9 +409,9 @@ section {
 }
 
 .project-card {
-
+  
   background: #1e293b;
-  padding: 40px;
+  padding: 70px;
   border-radius: 10px;
   color: #f8fafc;
   font-weight: 500;
@@ -444,9 +424,6 @@ section {
   transform: translateY(-5px);
 }
 
-
-
-
 .glow-line {
   width: 100%;
   height: 5px;
@@ -456,7 +433,6 @@ section {
 }
 
 /* contact section  */
-
 
 h2 {
   text-align: center;
@@ -591,7 +567,6 @@ button:hover {
    RESPONSIVE DESIGN
 ========================= */
 
-
 @media (max-width: 1024px) {
   .hero {
     text-align: center;
@@ -619,7 +594,6 @@ button:hover {
 
 /* Mobile view (max-width: 768px) */
 @media (max-width: 768px) {
-
   /* Navbar */
   .nav-links {
     display: none;
@@ -633,7 +607,9 @@ button:hover {
     z-index: 1001;
     transition: all 0.3s ease-in-out;
   }
-
+  .project-card {
+    width: 90%;
+  }
   .nav-links.active {
     display: flex;
     text-align: center;
@@ -686,9 +662,7 @@ button:hover {
 
   /* Buttons */
   .btn {
-    
-    gap: 12px;
-    margin-top: 20px;
+    margin-left: 7px;
     width: 100%;
     align-items: center;
   }
@@ -715,6 +689,11 @@ button:hover {
   .footer-content {
     padding: 0 15px;
   }
+
+  /* About paragraph font size smaller */
+  .about p {
+    font-size: 1rem;
+  }
 }
 
 /* Small mobile view (max-width: 480px) */
@@ -734,5 +713,9 @@ button:hover {
 
   .project-card {
     width: 90%;
+  }
+  /* About paragraph font size even smaller */
+  .about p {
+    font-size: 0.6rem;
   }
 }
